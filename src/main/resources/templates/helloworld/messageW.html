@@ -1,15 +1,17 @@
 <!doctype html>
 <html>
   <head>
+    <title>{{ title }}</title>
     <link rel="stylesheet" href="/site.css">
   </head>
   <body>
-  
-    <a href="/">Back home</a>
-    
-    <h1>Your Result: {{ sum }}</h1>
+    <h1>Houston, we have a message!</h1>
+    <p>
+      <b>Message:</b>
+      {{ messageToBeShown }}
+    </p>
+    {{> helloworld/message-formW }}
     {{> helloworld/adder-form }}
     {{> helloworld/subtr-form }}
-    
   </body>
 </html>
