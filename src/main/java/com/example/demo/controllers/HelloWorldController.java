@@ -51,28 +51,5 @@ public class HelloWorldController {
 		mv.addObject("title", title);
 		mv.addObject("messageToBeShown", wsp.lrCase(submittedMessage));
 		return mv;}
-	 
-	
-	@PostMapping("adder")
-	public String addTwoNumbers(
-			// Indicates that a m() parameter should be bound to a web request parameter
-			@RequestParam(name="left")  int    first, 
-			@RequestParam(name="right") double second, 
-			Model model) 
-	{
-		Adder adder = new Adder(first, second);
-		double result = adder.calculate();
-		model.addAttribute("sum", result);
-		return "helloworld/sum-result";}
-
-	
-	@PostMapping("subtr")
-	public String subtrTwoNumbers(
-			@RequestParam(name="left")  int    first, 
-			@RequestParam(name="right") double second, 
-			Model model) 
-	{
-		Subtr subtr = new Subtr(first, second);
-		model.addAttribute("sum", subtr.subtr());
-		return "helloworld/sum-result";}		
+	 	
 }
