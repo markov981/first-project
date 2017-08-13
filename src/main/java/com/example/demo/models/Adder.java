@@ -2,17 +2,14 @@ package com.example.demo.models;
 
 public class Adder {
 	
-	int    s1; 
-	double s2;
+	double s1; double s2;
 	
-	public Adder(int first, double second) 
+	public Adder(double first, double second) 
 	{
 		s1 = first;
 		s2 = second;}
 	
 	
-	public double calculate() 
-	{
-		return s1 + s2;}
-
+	public double sum() { return s1 + s2;}
+	public String opr() { return "Addition";}
 }

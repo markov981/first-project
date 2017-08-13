@@ -1,0 +1,20 @@
+<h2>Calculator</h2>
+
+<form method="post" action="/calc/enter">
+
+  <input type="number" name="left"  value="0"   step="any" required>   
+  <input type="number" name="right" value="0"   step="any" required>
+  
+  <button>Calculate Stuff</button>
+  
+  <p>
+  <button name="operation" value="add" title="Addition" 		style="height:40px;width:40px"> + </button>
+  <button name="operation" value="sub" title="Subtraction" 		style="height:40px;width:40px"> - </button>
+  <button name="operation" value="mlt" title="Multiplication" 	style="height:40px;width:40px"> * </button>
+  <button name="operation" value="div" title="Division" 		style="height:40px;width:40px"> / </button>
+  <button name="operation" value="mod" title="Remainder" 		style="height:40px;width:40px"> % </button>
+  <button name="operation" value="exp" title="Raise X to the power of Y" 
+          style="height:40px;width:40px; vertical-align:top">X<sup>y</sup></button>
+  </p>
+  
+</form> 

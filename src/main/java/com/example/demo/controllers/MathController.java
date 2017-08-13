@@ -23,7 +23,7 @@ public class MathController {
 			Model model) 
 	{
 		Adder adder = new Adder(first, second);
-		double result = adder.calculate();
+		double result = adder.sum();
 		model.addAttribute("sum", result);
 		return "helloworld/sum-result";
 	}

@@ -1,0 +1,14 @@
+<h4>Result Looks Right? What a pleasant surprise...</h4>
+
+<form method="post" action="/calc/enter">
+
+  <input type="number" name="left"  value="{{mem}}" step="any" required>
+  <input type="number" name="right" value="0"       step="any" required>
+  
+  <button>Calculator</button>
+  
+  <p>
+  <button name="operation" value="mem" title="Recall the last result from memory" 
+          style="height:40px;width:40px">M+</button>
+  </p>
+</form> 

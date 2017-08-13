@@ -51,5 +51,27 @@ public class HelloWorldController {
 		mv.addObject("title", title);
 		mv.addObject("messageToBeShown", wsp.lrCase(submittedMessage));
 		return mv;}
+	
+	
+	@GetMapping("say-something")  
+	public String makeAChoice(
+			String submittedMessage, 
+			String speechChoice, 
+			Model  model) 
+	{
+		if (speechChoice.equals("yell")) 
+		{  
+			Yeller yel2 = new Yeller();
+			String loud = yel2.caps(submittedMessage);
+			model.addAttribute("output", loud);
+		}
+		else 
+		{
+			Whisperer wsp2 = new Whisperer();
+			String quiet = wsp2.lrCase(submittedMessage);
+			model.addAttribute("output", quiet);
+		}		
+		return "helloworld/mixed-messages";
+	}
 	 	
 }
